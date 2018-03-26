@@ -1,6 +1,6 @@
 Edit Figure!
   <%#binding.pry%>
-<form action="/figures" method="POST">
+<form action="/figures/:id" method="POST">
   <input type="hidden" name="_method" value="PATCH">
     Name: <input type="text" id="figure_name" name="figure[name]" value="<%= @figure.name %>"><br></br>
     Titles: <% Title.all.each do |title| %>
