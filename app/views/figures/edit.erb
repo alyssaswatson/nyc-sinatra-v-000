@@ -1,4 +1,4 @@
-
+  <%binding.pry%>
 <form action="/figures" method="POST">
   <input type="hidden" name="_method" value="PATCH">
     Name: <input type="text" id="figure_name" name="figure[name]" value="<%= @figure.name %>"><br></br>
@@ -7,7 +7,7 @@
       <input type="checkbox" id="title_<%=title.id%>" name="figure[title_ids][]" value="<%= title.id %>"><br>
 
     <% end %>
-    <%binding.pry%>
+
 Create New Title: <input type="text" id="new_title" name="title[name]">
 
 
