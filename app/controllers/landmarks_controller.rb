@@ -10,8 +10,8 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id' do
-    @figure = Figure.find(params[:id])
-    erb :'figures/show'
+    @landmark = Landmark.find(params[:id])
+    erb :'landmark/show'
   end
 
   get '/figures/:id/edit' do
