@@ -1,2 +1,7 @@
-<%="#{@figure.name}"%>
-<%binding.pry%>
+Person Name:
+  <%="#{@figure.name}"%>
+Landmarks:
+  <%@figure.landmarks.each do |landmark|%>
+    <li><%=landmark.name%></li>
+  <%end%>
+<%#binding.pry%>
