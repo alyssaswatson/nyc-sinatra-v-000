@@ -41,6 +41,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     #binding.pry
     @figure = Figure.find_by(params[:id])
+    @figure.update(params[:figure])
     if !params[:landmark][:name].empty?
       @figure.landmarks << Landmark.create(params[:landmark])
     end
