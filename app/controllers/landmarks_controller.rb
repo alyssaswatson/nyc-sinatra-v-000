@@ -9,6 +9,18 @@ class LandmarksController < ApplicationController
     erb :'landmarks/new'
   end
 
+  get '/landmarks/:id' do
+    @figure = Figure.find(params[:id])
+    erb :'figures/show'
+  end
+
+  get '/figures/:id/edit' do
+
+     @figure = Figure.find(params[:id])
+     erb :'figures/edit'
+  end
+
+
   post '/landmarks' do
     #binding.pry
      @landmark = Landmark.create(params["landmark"])
